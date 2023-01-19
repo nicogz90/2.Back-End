@@ -1,0 +1,58 @@
+{% extends "master.njk" %}
+{% block contenido %}
+
+  <div class="container pb-4">
+    <div class="container h-100">
+      <div class="row align-items-center h-100">
+        <div class="col">
+          <h1 class="my-4">Listado de Usuarios</h1>
+        </div>
+        <div class="col ">
+          <a href="/usuarios/crear" class="  btn btn-success">Nuevo</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table table-bordered table-striped table-hover">
+          <thead>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+            <th colspan="2" style="text-align:center">Acciones</th>
+          </thead>
+          <tbody>
+            {% for user in users %}
+              <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.lastname }}</td>
+                <td>{{ user.age }}</td>
+                <td>
+                  <a
+                    href="/usuarios/modificar/{{ user.id }}"
+                    class="btn btn-sm btn-warning"
+                  >
+                    Editar
+                  </a>
+                </td>
+                <td>
+                  <a
+                    href="/usuarios/eliminar/{{ user.id }}"
+                    class="btn btn-sm btn-danger"
+                  >
+                    Eliminar
+                  </a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <a href="/" class="btn btn-primary">Ir a la página de Inicio</a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

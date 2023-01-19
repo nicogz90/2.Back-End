@@ -1,0 +1,12 @@
+{% extends "master.njk" %}
+{% block main %}
+
+  <div class="container my-4">
+    <h1 class="fs-3 mb-4">Todas las ofertas laborales</h1>
+    {% for job in jobs %}
+      {% include "partials/jobCard.njk" %}
+    {% endfor %}
+
+  </div>
+
+{% endblock %}

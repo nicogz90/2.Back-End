@@ -1,0 +1,5 @@
+.now
+.env
+node_modules
+.vercel
+

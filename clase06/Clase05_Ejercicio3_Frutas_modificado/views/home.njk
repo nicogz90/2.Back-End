@@ -1,0 +1,13 @@
+<h1>Listado de Frutas</h1>
+
+<form action="/frutas" method="POST">
+    <input type="text" name="nuevaFruta"> 
+    <button type="submit">Agregar</button>
+</form>
+
+<ul>
+    {% for fruta in frutas %}
+    <li>{{fruta.name}}</li> {# cada una de las filas de la columna 'name' de la tabla creada en la base de datos #}
+    {% endfor %}
+</ul>
+

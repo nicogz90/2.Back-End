@@ -1,0 +1,35 @@
+{% extends "master.njk" %}
+
+{% block main %}
+  <div class="container narrow pt-4">
+    <div class="shadow rounded p-4 my-4 bg-white">
+      <h1 class="fs-2">Registro</h1>
+      {% if messages.error %}
+        <div class="alert alert-danger">{{ messages.error }}</div>
+      {% endif %}
+      <hr>
+      <form class="" action="/register" method="post">
+        <div class="mb-3">
+          <label for="firstname" class="form-label">Nombre</label>
+          <input type="text" name="firstname" value="" placeholder="Ingresar nombre..." class="form-control" required="true"/>
+        </div>
+        <div class="mb-3">
+          <label for="lastname" class="form-label">Apellido</label>
+          <input type="text" name="lastname" value="" placeholder="Ingresar apellido..." class="form-control" required="true"/>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">E-mail</label>
+          <input type="text" name="email" value="" placeholder="Ingresar correo electrónico..." class="form-control" required="true"/>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Contraseña</label>
+          <input type="password" name="password" value="" placeholder="Ingresar contraseña..." class="form-control" required="true"/>
+        </div>
+        <button type="submit" name="button" class="btn btn-success">
+          Iniciar sesión
+        </button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

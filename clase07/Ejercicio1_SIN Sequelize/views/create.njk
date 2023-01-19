@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clase 8 - Ejercicio 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+            <div class="col"> {# FORMULARIOS #}
+                <div class="row border mb-3"> {# CREAR NUEVO USUARIO #}
+                  <h2 class="bg-light">Crear nuevo usuario</h2>
+                  <form class="" action="/usuarios" method="post"> {# POST a /usuarios #}
+                    <div class="mb-3">
+                      <label for="firstname" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" name="firstname" placeholder="Ingresar nombre...">
+                    </div>                    
+                    <div class="mb-3">
+                      <label for="lastname" class="form-label">Apellido</label>
+                      <input type="text" class="form-control" name="lastname" placeholder="Ingresar apellido...">
+                    </div>
+                    <div class="mb-3">
+                      <label for="age" class="form-label">Edad</label>
+                      <input type="number" class="form-control" name="age" placeholder="Ingresar edad...">
+                    </div>
+                    <button type="submit" class="mb-3 btn btn-success">Guardar</button>
+                  </form>
+                </div>
+            </div>
+            <a href="/usuarios" class="btn btn-primary">Volver</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>

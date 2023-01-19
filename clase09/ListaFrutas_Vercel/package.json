@@ -1,0 +1,16 @@
+{
+  "name": "ejercicio_listafrutas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hack Academy",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.3",
+    "nunjucks": "^3.2.3"
+  }
+}

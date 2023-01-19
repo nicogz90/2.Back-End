@@ -1,0 +1,2 @@
+Uno que tiene las frutas en vercel SIN base de datos. 
+Y el otro que es que el se hizo en la clase, que tiene Sequelize + Supabase y se puede subir a vercel!

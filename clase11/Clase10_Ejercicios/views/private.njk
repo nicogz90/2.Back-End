@@ -1,0 +1,22 @@
+{% extends "master.njk" %}
+{% block main %}
+  <h1>🔐 Página privada</h1>
+  <p>
+    FirstName: {{ user.firstname }}
+  </p>
+  <p>
+    LastName: {{ user.lastname }}
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error dolorum quidem veritatis ullam alias, amet earum necessitatibus repellat dolorem voluptatum nostrum eligendi assumenda? Voluptas unde molestias blanditiis aliquam recusandae dolor.
+
+  </p>
+  <p>
+    🔙
+    <a href="/">Volver a la página de inicio</a>.
+  </p>
+  <p>
+    👋
+    <a href="/logout">Cerrar sesión</a>.
+  </p>
+{% endblock %}

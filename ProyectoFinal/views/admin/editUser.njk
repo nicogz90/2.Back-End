@@ -1,0 +1,39 @@
+{% extends "master.njk" %}
+{% block main %}
+  <div class="container mt-4 narrow">
+    <div class="card mb-3">
+      <div class="card-header p-3 bg-transparent d-flex justify-content-between align-items-center">
+        <h1 class="fs-4 mb-0">Editar usuario</h1>
+      </div>
+      <div class="card-body">
+        <form action="/admin/usuarios/editar/{{userToEdit.id}}" method="post">
+          <div class="mb-3">
+            <label for="firstname" class="form-label">Nombre</label>
+            <input id="firstname" name="firstname" class="form-control" type="text" placeholder="Ingresar nombre..." value="{{ userToEdit.firstname }}">
+          </div>
+
+          <div class="mb-3">
+            <label for="lastname" class="form-label">Apellido</label>
+            <input id="lastname" name="lastname" class="form-control" type="text" placeholder="Ingresar apellido..." value="{{ userToEdit.lastname }}">
+          </div>
+
+          <div class="mb-3">
+            <label for="email" class="form-label">E-mail</label>
+            <input id="email" name="email" class="form-control" type="text" placeholder="Ingresar correo electrónico..." value="{{ userToEdit.email }}">
+          </div>
+
+          <div class="mb-4">
+            <label for="avatar" class="form-label">Avatar</label>
+            <input class="form-control" type="file" id="avatar" name="avatar">
+          </div>
+
+          <button type="submit" class="btn btn-success px-4">Editar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class=" my-4"></div>
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "master.njk" %}
+{% block main %}
+
+  <div id="hero">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 d-flex align-items-center">
+          <div>
+            <h1>Encuentra el trabajo<br class="d-none d-md-block">
+              de tus sueños</h1>
+            <p>Hackjobs es la forma más simple de conseguir un empleo.</p>
+          </div>
+
+        </div>
+        <div class="col-md-5 text-center">
+          <img src="/img/job_offers_1.svg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="companies" class="container my-4">
+    <h2 class="mb-3">Empresas que confían en nosotros</h2>
+    <div class="">
+      <img src="/img/logos/microsoft.svg" alt="Microsoft">
+      <img src="/img/logos/indeed.svg" alt="Indeed">
+      <img src="/img/logos/cocacola.svg" alt="Coca-Cola">
+      <img src="/img/logos/slack.svg" alt="Slack">
+      <img src="/img/logos/walmart.svg" alt="Walmart">
+      <img src="/img/logos/google.svg" alt="Google">
+    </div>
+  </section>
+
+  <section id="featured">
+    <div class="container">
+      <h2 class="mb-4">Ofertas destacadas</h2>
+      {% for job in jobs %}
+        {% include "partials/jobCard.njk" %}
+      {% endfor %}
+    </div>
+
+  </section>
+
+{% endblock %}
+
+{% block customJs %}
+  <style>
+    .tns-nav {
+      text-align: center;
+    }
+    .tns-nav > .tns-nav-active {
+      background: #999;
+    }
+    .tns-nav > [aria-controls] {
+      width: 9px;
+      height: 9px;
+      padding: 0;
+      margin: 0 5px;
+      border-radius: 50%;
+      background: #ddd;
+      border: 0;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script>
+    var slider = tns({
+      container: '#companies > div',
+      items: 2,
+      controls: false,
+      navPosition: "bottom",
+      mouseDrag: true,
+      responsive: {
+        768: {
+          items: 4
+        },
+        992: {
+          items: 6
+        }
+      }
+    });
+  </script>
+{% endblock %}
