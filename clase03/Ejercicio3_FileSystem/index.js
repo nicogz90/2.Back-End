@@ -1,6 +1,7 @@
 const fs = require("fs");
 const express = require("express");
 const app = express();
+const PORT = 8000;
 
 const { format } = require("date-fns"); // importamos solo la funcion format de todo el modulo date-fns
 const { es } = require("date-fns/locale"); // configuracion de date-fns en español
@@ -21,6 +22,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.listen(8000, () => {
-  console.log("Servidor escuchando en http://localhost:8000.\n");
+app.listen(`${PORT}`, () => {
+  console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });

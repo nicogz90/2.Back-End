@@ -11,7 +11,7 @@ const main = async () => {
   // Sincronizamos la base de datos
   await sequelize.sync({
     force: true,
-  });
+  }); // con "force: true" se borran los datos pre-existentes
   console.log("Base de datos sincronizada");
 
   // usamos el valor del .env o usamos el valor 3000 por defecto

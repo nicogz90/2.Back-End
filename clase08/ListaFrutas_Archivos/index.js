@@ -9,7 +9,7 @@ const nunjucks = require("nunjucks");
 const routes = require("./routes");
 
 async function main() {
-  await sequelize.sync({ force: true });
+  await sequelize.sync({ force: false });
 
   // usamos el valor del .env o usamos el valor 3000 por defecto
   const PORT = process.env.SERVER_PORT || 3000;

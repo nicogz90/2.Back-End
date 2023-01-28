@@ -1,7 +1,5 @@
-/**
- * Este ejercicio fue resuelto de 2 formas distintas.
- * Notar que ambas versiones no quitan las vocales que tengan acentos.
- */
+/* Resuelto de 2 formas distintas.
+ * Notar que ambas versiones no quitan las vocales que tengan acentos.*/
 
 /****************************************************************************/
 
@@ -18,16 +16,16 @@ function removerVocales(str) {
   return strArray.join("");
 }
 
-console.log(removerVocales("Hola MundO!!"));
+console.log("v1 >> ", removerVocales("Hola MundO!!"));
 
 /****************************************************************************/
 
-// VERSIÓN 2:
+// VERSIÓN 2 (RegEx: Regular expressions)
 
 function removerVocales_v2(str) {
   return str.replace(/[aeiou]/gi, "");
 }
 
-console.log(removerVocales_v2("Hola MundO!!"));
+console.log("v2 >> ", removerVocales_v2("Hola MundO!!"));
 
 /****************************************************************************/

@@ -14,7 +14,7 @@ module.exports = async () => {
     });
   }
 
-  await User.bulkCreate(users);
+  await User.bulkCreate(users); // creo varios usuarios simultáneamente por defecto (datos base)
 
   console.log("[Database] Se corrió el seeder de Users.");
 };

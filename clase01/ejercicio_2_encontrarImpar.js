@@ -1,6 +1,8 @@
-/**
- * Este ejercicio fue resuelto de 4 formas distintas.
- */
+/* función que reciba como parámetro un array de números enteros (positivos y/o negativos) 
+y retorna el número del array que aparezca un número impar de veces.
+Siempre se recibirá un array con un sólo número con esas características. */
+
+/* Resuelto de 4 formas distintas. */
 
 const numeros = [20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5];
 
@@ -25,7 +27,7 @@ function encontrarImpar_v1(numeros) {
   }
 }
 
-console.log(encontrarImpar_v1(numeros));
+console.log("v1 = ", encontrarImpar_v1(numeros));
 
 /****************************************************************************/
 
@@ -45,7 +47,7 @@ function encontrarImpar_v2(numeros) {
   }
 }
 
-console.log(encontrarImpar_v2(numeros));
+console.log("v2 = ", encontrarImpar_v2(numeros));
 
 /****************************************************************************/
 
@@ -72,7 +74,7 @@ function encontrarImpar_v3(numeros) {
   return numeros[numeros.length - 1];
 }
 
-console.log(encontrarImpar_v3(numeros));
+console.log("v3 = ", encontrarImpar_v3(numeros));
 
 /****************************************************************************/
 
@@ -105,6 +107,6 @@ function encontrarImpar_v4(numeros) {
   return result.value;
 }
 
-console.log(encontrarImpar_v4(numeros));
+console.log("v4 = ", encontrarImpar_v4(numeros));
 
 /****************************************************************************/

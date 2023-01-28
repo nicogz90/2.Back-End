@@ -19,8 +19,6 @@ module.exports = {
     res.redirect("/usuarios");
   },
 
-  show: (req, res) => {},
-
   edit: async (req, res) => {
     const user = await User.findByPk(req.params.id);
 

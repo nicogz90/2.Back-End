@@ -9,7 +9,7 @@ const nunjucks = require("nunjucks");
 const routes = require("./routes");
 
 async function main() {
-  await sequelize.sync({ force: true });
+  await sequelize.sync({ force: true }); // con "force: true" sequelize resetea los datos de la BD
 
   // usamos el valor del .env o usamos el valor 3000 por defecto
   const PORT = process.env.SERVER_PORT || 3000;

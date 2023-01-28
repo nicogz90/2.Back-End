@@ -10,7 +10,7 @@ const addFruit = async (req, res) => {
   const fruta = req.body.newFruit;
   if (fruta) {
     const db = await createConn();
-    const query = `INSERT INTO frutas (nombre) VALUES(?)`;
+    const query = `INSERT INTO frutas (name) VALUES(?)`;
     await db.execute(query, [fruta]);
   }
   res.redirect("/frutas");

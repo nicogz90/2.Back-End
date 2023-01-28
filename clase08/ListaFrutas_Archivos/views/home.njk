@@ -24,10 +24,10 @@
       <ul>
         {% for fruit in fruits %}
           <li>{{ fruit.name }}</li>
-          <img src="/img/{{fruit.imagePath}}" alt="" srcset="">
+          <img src="/img/{{fruit.imagePath}}" alt="" style="height: 100px">
         {% endfor %}
       </ul>
-
+      <a class="btn btn-primary" href="/frutas/crear" role="button">Agregar fruta</a>
     </div>
 
     <script

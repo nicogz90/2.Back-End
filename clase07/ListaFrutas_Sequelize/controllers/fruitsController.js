@@ -2,6 +2,7 @@ const { Fruit } = require("../models");
 
 const getFruits = async (req, res) => {
   const fruits = await Fruit.findAll();
+  console.log(fruits);
   res.status(200).render("home", { fruits });
 };
 

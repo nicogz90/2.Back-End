@@ -1,3 +1,5 @@
+// Crear en primera instancia la base de datos con la tabla "users" >> users.sql
+
 const mysql = require("mysql2/promise");
 
 const connectionConfig = {

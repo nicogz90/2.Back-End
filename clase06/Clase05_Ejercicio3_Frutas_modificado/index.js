@@ -1,3 +1,6 @@
+// Creo una base de datos con una tabla "frutas" que tenga una columna "name"
+// la cual se conectará a nuestra aplicación a través de MySQL (gestor de base de datos)
+
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -5,7 +8,7 @@ const express = require("express");
 const app = express();
 
 const host = "http://localhost";
-const port = process.env.SERVER_PORT;
+const port = process.env.SERVER_PORT || 3000;
 
 /* ---------- */
 const nunjucks = require("nunjucks");
@@ -23,9 +26,10 @@ app.use(
 
 const { crearConexion } = require("./utils/database"); // conexión con base de datos
 
+// Handlers:
 const obtenerFrutas = async (req, res) => {
   const conexion = await crearConexion();
-  const query = "SELECT * FROM frutas";
+  const query = "SELECT * FROM frutas"; // consulta SQL
   const [rows] = await conexion.query(query);
   res.render("home", { frutas: rows });
 };
@@ -43,6 +47,8 @@ const crearFrutas = async (req, res) => {
     res.redirect("/error");
   }
 };
+
+/* ---------- */
 
 app.get("/", (req, res) => {
   res.send(`<a href="/frutas">Ir a la página de frutas</a>`);
