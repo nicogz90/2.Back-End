@@ -1,4 +1,4 @@
 .now
 .vercel
-node_modules
+node modules
 .env
