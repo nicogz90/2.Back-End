@@ -6,7 +6,7 @@ const { sequelize } = require("./models");
 
 // Sincronizamos la base de datos
 sequelize
-  .sync({ force: false }) // false >> para que actualice la base de datos, pero no borre al reiniciar
+  .sync({ force: false }) // false (por defecto) >> para que actualice la base de datos, pero no borre al reiniciar
   .then(() => {
     console.log("Base sincronizada");
   })

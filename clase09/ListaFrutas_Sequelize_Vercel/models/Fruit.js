@@ -26,6 +26,7 @@ const createModel = (sequelize) => {
     },
     {
       sequelize: sequelize, // Conectamos el modelo con la conexión
+      modelName: "fruits",
     }
   );
 

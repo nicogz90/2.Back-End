@@ -3,7 +3,7 @@ const router = express.Router();
 const fruitsController = require("./controllers/fruitsController");
 
 router.get("/", (req, res) => {
-  res.send(`<a href="/frutas">Ir a la página de frutas!!</a>`);
+  res.send(`<a href="/frutas">Ir a la página de frutas!</a>`);
 });
 
 router.get("/frutas", fruitsController.index);

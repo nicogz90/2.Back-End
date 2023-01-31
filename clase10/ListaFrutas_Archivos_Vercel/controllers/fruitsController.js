@@ -51,18 +51,12 @@ const addFruit = async (req, res) => {
   res.redirect("/frutas");
 };
 
-const storeSupabase = async (req, res) => {
-  await User.create(userData); // <== en lugar de construir el objeto aca, lo construi en la linea 23 😉
-
-  res.redirect("/usuarios");
-};
-
 const createFruit = async (req, res) => {
   res.render("create");
 };
 
 module.exports = {
   listaFrutas: getFruits,
-  almacerFrutas: addFruit,
+  almacenarFrutas: addFruit,
   crearFrutas: createFruit,
 };

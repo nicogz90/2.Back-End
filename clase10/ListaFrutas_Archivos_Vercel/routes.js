@@ -17,7 +17,7 @@ const mid2 = (req, res, next) => {
 };
 
 router.get("/frutas", mid1, mid2, fruitsController.listaFrutas);
-router.post("/frutas", fruitsController.almacerFrutas);
+router.post("/frutas", fruitsController.almacenarFrutas);
 
 router.get("/frutas/crear", fruitsController.crearFrutas);
 
