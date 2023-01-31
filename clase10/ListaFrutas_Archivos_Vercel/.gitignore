@@ -2,3 +2,5 @@
 .env
 node modules
 .vercel
+
+.vercel

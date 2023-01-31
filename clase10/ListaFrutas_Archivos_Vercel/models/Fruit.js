@@ -23,6 +23,7 @@ const createModel = (sequelize) => {
     },
     {
       sequelize: sequelize,
+      modelName: "frutas",
     }
   );
 
