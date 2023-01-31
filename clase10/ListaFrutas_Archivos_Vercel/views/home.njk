@@ -20,15 +20,15 @@
   <body>
     <div class="container" style="max-width: 500px">
       <h1 class="my-3">Listado de frutas</h1>
+      <a href="/frutas/crear">Agregar fruta</a>
 
       <ul>
         {% for fruit in fruits %}
           <li>{{ fruit.name }}</li>
-          <img src="https://dleaeerrgayjitstzzvr.supabase.co/storage/v1/object/public/frutas/{{fruit.imagePath}}" alt="" srcset="">
+          <img src="https://dleaeerrgayjitstzzvr.supabase.co/storage/v1/object/public/frutas/{{fruit.imagePath}}" alt="" class="rounded-circle img-thumbnail" style="height: 100px">
         {% endfor %}
       </ul>
 
-      <a href="/frutas/crear">Agregar fruta</a>
     </div>
 
     <script
