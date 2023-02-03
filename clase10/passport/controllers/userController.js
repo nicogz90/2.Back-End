@@ -8,12 +8,10 @@ async function showLogin(req, res) {
 }
 
 // realizo login
-function login() {
-  passport.authenticate("local", {
-    successRedirect: "/private",
-    failureRedirect: "/login",
-  });
-}
+const login = passport.authenticate("local", {
+  successRedirect: "/private",
+  failureRedirect: "/login",
+});
 
 // mostrar el form de registro
 async function showRegister(req, res) {
@@ -34,7 +32,21 @@ async function register(req, res) {
 
 // muestra la pagina privada
 async function showPrivate(req, res) {
-  res.render("private");
+  if (req.user) {
+    res.render("private");
+  } else {
+    res.redirect("/login");
+  }
 }
 
-module.exports = { showLogin, login, showRegister, register, showPrivate };
+// destruye la sesion
+function logout(req, res, next) {
+  req.logout(function (err) {
+    if (err) {
+      return next(err);
+    }
+    res.redirect("/login");
+  });
+}
+
+module.exports = { showLogin, login, showRegister, register, showPrivate, logout };

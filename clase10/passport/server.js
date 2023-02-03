@@ -72,7 +72,7 @@ nunjucks.configure(__dirname + "/views", {
 });
 app.set("view engine", "njk");
 
-dbInitialSetup(); // Crea tablas e inserta datos de prueba.
+dbInitialSetup(); // Crea tablas (e inserta datos de prueba).
 
 app.use(routes);
 

@@ -1,8 +1,7 @@
 const express = require("express");
 const privateRouter = express.Router();
-const userController = require("../controllers/userController")
+const userController = require("../controllers/userController");
 
-privateRouter.get("/", userController.showPrivate );
+privateRouter.get("/", userController.showPrivate);
 
 module.exports = privateRouter;
-

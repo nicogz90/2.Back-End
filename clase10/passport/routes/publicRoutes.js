@@ -10,4 +10,6 @@ publicRouter.get("/register", userController.showRegister);
 
 publicRouter.post("/register", userController.register);
 
+publicRouter.get("/logout", userController.logout);
+
 module.exports = publicRouter;
