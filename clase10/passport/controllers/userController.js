@@ -1,5 +1,6 @@
 const { User } = require("../models");
 const { hashSync } = require("bcryptjs");
+const passport = require("passport");
 
 // muestra el login
 async function showLogin(req, res) {
@@ -7,7 +8,12 @@ async function showLogin(req, res) {
 }
 
 // realizo login
-async function login(req, res) {}
+function login() {
+  passport.authenticate("local", {
+    successRedirect: "/private",
+    failureRedirect: "/login",
+  });
+}
 
 // mostrar el form de registro
 async function showRegister(req, res) {

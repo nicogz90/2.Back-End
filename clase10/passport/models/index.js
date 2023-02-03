@@ -5,7 +5,7 @@ const createUserModel = require("./User");
 
 // creamos una conexion a la base de datos
 const sequelize = new Sequelize(
-  process.env.DB_DATABASE, // Ej: hack_academy_db
+  process.env.DB_DATABASE, // Ej: usuarios
   process.env.DB_USERNAME, // Ej: root
   process.env.DB_PASSWORD, // Ej: root
   {

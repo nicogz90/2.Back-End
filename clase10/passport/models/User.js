@@ -29,6 +29,7 @@ const createModel = (sequelize) => {
     },
     {
       sequelize: sequelize, // conexion de sequelize
+      modelName: "usuarios_clase10",
     },
   );
 
