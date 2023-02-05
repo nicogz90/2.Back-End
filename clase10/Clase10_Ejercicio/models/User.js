@@ -32,7 +32,7 @@ module.exports = (sequelize) => {
     },
     {
       sequelize,
-      modelName: "user",
+      modelName: "clase10_ej_usuario",
     },
   );
 

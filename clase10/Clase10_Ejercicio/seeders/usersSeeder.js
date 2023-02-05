@@ -17,5 +17,5 @@ module.exports = async () => {
   }
 
   await User.bulkCreate(users);
-  console.log("[Database] Se corrió el seeder de Articles.");
+  console.log("[Database] Se corrió el seeder de Usuarios.");
 };

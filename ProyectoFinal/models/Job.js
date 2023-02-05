@@ -29,6 +29,9 @@ module.exports = (sequelize) => {
       city: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          isUppercase: true,
+        },
       },
       applyEmail: {
         type: DataTypes.STRING,
@@ -43,8 +46,6 @@ module.exports = (sequelize) => {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      updatedAt: DataTypes.DATE,
-      createdAt: DataTypes.DATE,
     },
     {
       sequelize,

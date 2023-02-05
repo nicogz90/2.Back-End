@@ -6,7 +6,7 @@
         <h1 class="fs-4 mb-0">Editar oferta laboral</h1>
       </div>
       <div class="card-body">
-        <form action="/admin/ofertas/editar/{{ job.id }}" method="post">
+        <form action="/admin/ofertas/editar/ {{ job.id }}" method="post">
           <div class="mb-3">
             <label for="title" class="form-label">Título</label>
             <input id="title" name="title" class="form-control" type="text" placeholder="Ingresar título..." value="{{ job.title }}">

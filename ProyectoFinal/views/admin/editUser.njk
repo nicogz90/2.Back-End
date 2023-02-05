@@ -6,12 +6,11 @@
         <h1 class="fs-4 mb-0">Editar usuario</h1>
       </div>
       <div class="card-body">
-        <form action="/admin/usuarios/editar/{{userToEdit.id}}" method="post">
+        <form action="/admin/usuarios/editar/{{ userToEdit.id }}" method="post">
           <div class="mb-3">
             <label for="firstname" class="form-label">Nombre</label>
             <input id="firstname" name="firstname" class="form-control" type="text" placeholder="Ingresar nombre..." value="{{ userToEdit.firstname }}">
           </div>
-
           <div class="mb-3">
             <label for="lastname" class="form-label">Apellido</label>
             <input id="lastname" name="lastname" class="form-control" type="text" placeholder="Ingresar apellido..." value="{{ userToEdit.lastname }}">

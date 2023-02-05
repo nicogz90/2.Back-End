@@ -1,12 +1,12 @@
 const { DataTypes, Model } = require("sequelize");
 
-const createModel = (sequelize) => {
+module.exports = (sequelize) => {
   class User extends Model {}
 
   User.init(
     {
       id: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.BIGINT,
         primaryKey: true,
         autoIncrement: true,
       },
@@ -32,8 +32,5 @@ const createModel = (sequelize) => {
       modelName: "usuarios_clase10",
     },
   );
-
   return User;
 };
-
-module.exports = createModel;

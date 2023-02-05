@@ -7,7 +7,7 @@ module.exports = (app) => {
   app.use(
     session({
       // Por defecto las sessiones estan en la memoria del servidor
-      // Mediante esta propiedad podemos decirle que se guarden en una base de datos o cualquier otro mecanismo
+      // Mediante esta propiedad podemos decirle que se gurden en una base de datos o cualquier otro mecanismo
       store: new SequelizeStore({
         db: sequelize,
         tableName: "sessions",

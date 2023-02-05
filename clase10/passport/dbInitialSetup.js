@@ -1,12 +1,15 @@
 const db = require("./models");
 
 module.exports = async () => {
-  // Crear tablas:
-  db.sequelize
-    .sync({ force: true })
-    .then(async () => {
-      /* await require("./seeders")(); */
-      console.log("[Database] ¡Las tablas fueron creadas!");
-    })
-    .catch((error) => console.log(error));
+  try {
+    // Crear tablas:
+    await db.sequelize.sync({ force: true });
+    console.log("[Database] ¡Las tablas fueron creadas!");
+
+    // Insertar datos de prueba:
+    /* await require("./seeders")();
+    console.log("[Database] ¡Los datos de prueba fueron insertados!"); */
+  } catch (error) {
+    console.log(error);
+  }
 };

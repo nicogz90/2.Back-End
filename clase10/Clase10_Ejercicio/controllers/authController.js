@@ -8,14 +8,14 @@ module.exports = {
     failureFlash: true,
   }),
 
-  logout: (req, res, next) => {
+  logout: (req, res) => {
     // Funcion agregada por passport para poder hacer logout
     // destruye la sesion
     req.logout(function (err) {
       if (err) {
         return next(err);
       }
-      res.redirect("/login");
     });
+    res.redirect("/");
   },
 };

@@ -45,8 +45,8 @@ function logout(req, res, next) {
     if (err) {
       return next(err);
     }
-    res.redirect("/login");
   });
+  res.redirect("/login");
 }
 
 module.exports = { showLogin, login, showRegister, register, showPrivate, logout };
