@@ -4,13 +4,16 @@
   <div class="container narrow pt-4">
     <div class="shadow rounded p-4 my-4 bg-white">
       <h1 class="fs-2">Registro</h1>
+      {% if messages.error %}
+        <div class="alert alert-danger">{{ messages.error }}</div>
+      {% endif %}
       {% if messages.errors %}
         {% for error in messages.errors %}
           <div class="alert alert-danger">{{ error }}</div>
         {% endfor %}
       {% endif %}
       <hr>
-      <form class="" action="/register" method="post">
+      <form class="" action="/register" method="post" enctype="multipart/form-data">
         <div class="mb-3">
           <label for="firstname" class="form-label">Nombre</label>
           <input type="text" name="firstname" value="" placeholder="Ingresar nombre..." class="form-control" required="true"/>
@@ -26,6 +29,10 @@
         <div class="mb-3">
           <label for="password" class="form-label">Contraseña</label>
           <input type="password" name="password" value="" placeholder="Ingresar contraseña..." class="form-control" required="true"/>
+        </div>
+        <div class="mb-3">
+          <label for="formFile" class="form-label">Agregar Avatar</label>
+          <input type="file" name="avatar" value="" accept="image/*" class="form-control"/>
         </div>
         <button type="submit" name="button" class="btn btn-success">
           Iniciar sesión

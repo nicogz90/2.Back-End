@@ -14,6 +14,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Nombre</th>
                 <th scope="col">Email</th>
+                <th scope="col">Avatar</th>
                 <th scope="col">Acciones</th>
               </tr>
             </thead>
@@ -26,6 +27,11 @@
                     {{ u.lastname }}
                   </td>
                   <td>{{ u.email }}</td>
+                  <td>
+                    {%if (u.avatar) %} 
+                    <img src="https://dleaeerrgayjitstzzvr.supabase.co/storage/v1/object/public/usuarios/{{u.avatar}}" alt="" class="rounded-circle" style="height: 50px">
+                    {% endif %}
+                  </td>
                   <td>
                     <a href="/admin/usuarios/editar/{{ u.id }}" class="btn btn-primary btn-sm">
                       <i class="fas fa-edit"></i>
